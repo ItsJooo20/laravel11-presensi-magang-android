@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <color name="purple_500">#6200EE</color>
+        <color name="purple_200">#BB86FC</color>
+        <color name="white">#FFFFFF</color>
+        <color name="black">#000000</color>
+        <color name="gray">#D9D9D9</color>
+        <color name="green">#4CAF50</color>
+        <color name="red">#F44336</color>
+        <color name="navy">#102542</color>
+        <color name="back_gray">#FBFBFB</color>
+        <!-- Primary colors -->
+        <color name="primary">#4285F4</color>
+        <color name="on_primary">#FFFFFF</color>
+        <color name="primary_container">#DBECFE</color>
+        <color name="on_primary_container">#001A41</color>
+
+        <!-- Secondary colors -->
+        <color name="secondary">#34A853</color>
+        <color name="on_secondary">#FFFFFF</color>
+        <color name="secondary_container">#B7F0C7</color>
+        <color name="on_secondary_container">#002111</color>
+
+        <!-- Tertiary colors -->
+        <color name="tertiary">#EA4335</color>
+        <color name="on_tertiary">#FFFFFF</color>
+        <color name="tertiary_container">#FFDAD6</color>
+        <color name="on_tertiary_container">#410002</color>
+
+        <!-- Background colors -->
+        <color name="background">#FAFAFA</color>
+        <color name="on_background">#1F1F1F</color>
+        <color name="surface">#FFFFFF</color>
+        <color name="on_surface">#1F1F1F</color>
+        <color name="surface_variant">#E7E0EC</color>
+        <color name="on_surface_variant">#49454F</color>
+        <color name="outline">#79747E</color>
+
+</resources>

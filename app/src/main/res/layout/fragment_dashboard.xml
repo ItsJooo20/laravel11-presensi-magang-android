@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:background="@color/white">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/navy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+     <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!\nMichaelfito"
+        android:textColor="@color/navy"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialCardView" /> <!-- Sejajar vertikal dengan ImageView -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/profile_pic" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="07:40"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:textColor="@color/navy"
+        android:textStyle="bold"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textWelcome" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Monday, 3 Feb 2025"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/navy"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTime" />
+
+    <!-- Baris Keempat: Dua Button -->
+    <Button
+        android:id="@+id/btnCheckIn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="152dp"
+        android:backgroundTint="@color/navy"
+        android:text="Check In"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCheckOut"
+        app:layout_constraintTop_toBottomOf="@id/textDate"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btnCheckOut"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="152dp"
+        android:backgroundTint="@color/gray"
+        android:text="Check Out"
+        android:textSize="16dp"
+        android:textColor="@color/navy"
+        app:cornerRadius="8dp"
+        app:layout_constraintStart_toEndOf="@id/btnCheckIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDate"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginStart="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

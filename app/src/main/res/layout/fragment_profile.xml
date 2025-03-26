@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/navy"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button Settings -->
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Logout"
+            android:src="@drawable/ic_logout"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:tint="@color/navy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_profile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/navy"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:id="@+id/imageView_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_profile" />
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView_profile" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email"
+            android:textSize="16sp"
+            android:textColor="@color/navy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_name" />
+
+    <TextView
+        android:id="@+id/textView_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Role"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:textColor="@color/navy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_email" />
+
+    <TextView
+        android:id="@+id/textView_Detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Account Information"
+        android:textColor="@color/navy"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_role" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMentorInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Detail"
+        app:strokeWidth="0dp"
+        tools:layout_editor_absoluteX="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ic_mentor"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/gray"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icmentor"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_mentor_ic" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/lblMentor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Mentor Name"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvMentorName"
+                app:layout_constraintStart_toEndOf="@+id/ic_mentor"
+                app:layout_constraintTop_toTopOf="@+id/ic_mentor" />
+
+            <TextView
+                android:id="@+id/tvMentorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Immanuel Adee"
+                android:textColor="@color/navy"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_mentor"
+                app:layout_constraintStart_toEndOf="@+id/ic_mentor"
+                app:layout_constraintTop_toBottomOf="@+id/lblMentor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/outline"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardMentorInfo" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTimeStartInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:strokeWidth="0dp"
+        tools:layout_editor_absoluteX="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ic_start_time"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/gray"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icstarttime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_start" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/lblStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Start Work Hour"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvStartTime"
+                app:layout_constraintStart_toEndOf="@+id/ic_start_time"
+                app:layout_constraintTop_toTopOf="@+id/ic_start_time" />
+
+            <TextView
+                android:id="@+id/tvStartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="08:00"
+                android:textColor="@color/navy"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_start_time"
+                app:layout_constraintStart_toEndOf="@+id/ic_start_time"
+                app:layout_constraintTop_toBottomOf="@+id/lblStartTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/outline"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardTimeStartInfo" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTimeFinishInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:strokeWidth="0dp"
+        tools:layout_editor_absoluteX="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ic_finish_time"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/gray"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icfinishtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_finish" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/lblFinishTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Finish Work Hour"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvFinishTime"
+                app:layout_constraintStart_toEndOf="@+id/ic_finish_time"
+                app:layout_constraintTop_toTopOf="@+id/ic_finish_time" />
+
+            <TextView
+                android:id="@+id/tvFinishTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="15:00"
+                android:textColor="@color/navy"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_finish_time"
+                app:layout_constraintStart_toEndOf="@+id/ic_finish_time"
+                app:layout_constraintTop_toBottomOf="@+id/lblFinishTime" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/outline"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardTimeFinishInfo" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardChangePass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
+        app:strokeWidth="0dp"
+        tools:layout_editor_absoluteX="24dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ic_change_pass"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/gray"
+                app:cardCornerRadius="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_change_pass" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/lblChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Change Password"
+                android:textColor="@color/navy"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/ic_change_pass"
+                app:layout_constraintStart_toEndOf="@+id/ic_change_pass"
+                app:layout_constraintTop_toTopOf="@+id/ic_change_pass" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_arr_right"
+                app:layout_constraintBottom_toBottomOf="@+id/lblChangePass"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lblChangePass" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="256dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
